@@ -27,13 +27,15 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 * Machine Learning Model 1:
 Original sample of data 
 
-!['Model 1'](model1)
+!['Model 1'](model1.png)
+
 The model shows that the precision for identifying healthy loans is perfect, conversely the precision in identifying high-risk loans is low at 85%. This is a potential exposure of 15%, which can be very risky for a bank. The recall of healthy loans is very good, confirming majority of healthly loans are identified by the model, but again conversely the high-risk loans, with a score of 91%, confirms that there are a significant amount of customers that will be high risk loans that the model will identify as healthy loans. And lastly, when reviewing the F1 score, Healthy loans score reflects that there is both high precision and high recall, while High-risk loans had a low score indicating that the model was not able to correctly identify positive cases while avoiding false positives and false negatives. Overall, the model sampling method did not perform well with the current lending data from a risk management prespective.
 
 * Machine Learning Model 2:
 Resampled data using RandomOverSampler
 
-!['Model 2'](model2)
+!['Model 2'](model2.png)
+
 The logistic regression model above fit better with oversampled data. There was an improvement in recall and F1 score. The precision did not really change, but recall score improved from 91% to 99% and F1 from 88% to 91% which is a slight improvement. 
 
 ## Summary
