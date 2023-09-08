@@ -1,7 +1,16 @@
-# Creditworthiness_Analysis
-# General Overview 
+# Creditworthiness Analysis
+The following exercise was to build a model that can identify the creditworthiness of borrowers. All the details for the exercise are outline in the Credit Risk Analysis report.
+To review the code and modeling, please see attached Creditworthiness_imbalanced_classes folder for the credit_risk_resampling.ipynb and Resource folder for lending data csv.
 
-
+## Libraries & Dependencies:
+* Numpy
+* Pathlib
+* SKLearn
+* Pandas
+* IMBLearn
+  
+## Datasource:
+* lending_data.csv
 
 # Credit Risk Analysis Report
 
@@ -17,23 +26,13 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 * Machine Learning Model 1:
 Original sample of data 
-                      pre       rec       spe        f1       geo       iba       sup
 
-  Healthy loan       1.00      0.99      0.91      1.00      0.95      0.91     18765
-High-risk loan       0.85      0.91      0.99      0.88      0.95      0.90       619
-
-   avg / total       0.99      0.99      0.91      0.99      0.95      0.91     19384
 
 The model shows that the precision for identifying healthy loans is perfect, conversely the precision in identifying high-risk loans is low at 85%. This is a potential exposure of 15%, which can be very risky for a bank. The recall of healthy loans is very good, confirming majority of healthly loans are identified by the model, but again conversely the high-risk loans, with a score of 91%, confirms that there are a significant amount of customers that will be high risk loans that the model will identify as healthy loans. And lastly, when reviewing the F1 score, Healthy loans score reflects that there is both high precision and high recall, while High-risk loans had a low score indicating that the model was not able to correctly identify positive cases while avoiding false positives and false negatives. Overall, the model sampling method did not perform well with the current lending data from a risk management prespective.
 
 * Machine Learning Model 2:
 Resampled data using RandomOverSampler
- pre       rec       spe        f1       geo       iba       sup
 
-  Healthy loan       1.00      0.99      0.99      1.00      0.99      0.99     18765
-High-risk loan       0.84      0.99      0.99      0.91      0.99      0.99       619
-
-   avg / total       0.99      0.99      0.99      0.99      0.99      0.99     19384
 
 The logistic regression model above fit better with oversampled data. There was an improvement in recall and F1 score. The precision did not really change, but recall score improved from 91% to 99% and F1 from 88% to 91% which is a slight improvement. 
 
